@@ -1,5 +1,8 @@
 package com.automation.page.action;
 
+import java.io.File;
+import java.lang.reflect.Field;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -28,8 +31,10 @@ public class LoginPage extends BaseClass {
 		element(email).sendKeys(emailString);
 	}
 	
-	private void password(String passwordString) {
+	private void password(String passwordString) throws NoSuchFieldException {
 		element(password).sendKeys(passwordString);
+	
+		
 	}
 	
 	private void loginButton() {
@@ -47,7 +52,7 @@ public class LoginPage extends BaseClass {
 		element(ok).click();
 	}
 	
-	public void loginPage(String e, String p) {
+	public void loginPage(String e, String p) throws NoSuchFieldException {
 		loginButton();
 		enterEmail(e);
 		password(p);

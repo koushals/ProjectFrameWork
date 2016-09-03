@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class PropertyUtil {
 	
-	private   String fileName ;
+	private  String fileName ;
 	private  final String FILE_NAME = "//src//com//automation//utils//";
 	private  Properties p;
 	
@@ -27,6 +27,7 @@ public class PropertyUtil {
 		 return getPropertiesFromFile().getProperty(parameter);
 	}
 
+	
 	
 	
 	

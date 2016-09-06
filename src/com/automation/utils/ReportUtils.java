@@ -13,7 +13,8 @@ public class ReportUtils {
 	private FileWriter fw;
 	
 	
-	public ReportUtils(String filename) throws IOException {
+	public ReportUtils() throws IOException {
+		String filename = "output"+System.currentTimeMillis();
 		 file = new File(System.getProperty("user.dir")+filename+".txt");
 		if (!file.exists()) {
 			file.createNewFile();

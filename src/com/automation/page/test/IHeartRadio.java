@@ -5,8 +5,8 @@ import java.net.URL;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.automation.page.action.HomePage;
@@ -37,7 +37,7 @@ public class IHeartRadio {
 	
 
 	
-	@BeforeTest
+	@BeforeMethod
 	public void	createTheInstance() throws Exception{
 		capablities.setCapability(DEVICENAME,p.getPropertiesFromFile().getProperty(DEVICENAME));
 		capablities.setCapability(PLATFORMNAME, p.getPropertiesFromFile().getProperty(PLATFORMNAME));
@@ -70,7 +70,7 @@ public class IHeartRadio {
 	
 	
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() throws Exception {
 		if (driver != null) {
 			System.out.println("tearDown is called ...");

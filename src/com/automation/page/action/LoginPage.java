@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.automation.page.driver.BaseClass;
 import com.automation.page.locators.LoginPageEnum;
+import com.automation.utils.ReportUtils;
 
 import io.appium.java_client.AppiumDriver;
 
@@ -12,6 +13,8 @@ import io.appium.java_client.AppiumDriver;
 
 public class LoginPage extends BaseClass {
 	
+	AppiumDriver<WebElement> driver;
+	ReportUtils report;
 	public LoginPage(AppiumDriver<WebElement> driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -28,8 +31,10 @@ public class LoginPage extends BaseClass {
 		element(email).sendKeys(emailString);
 	}
 	
-	private void password(String passwordString) {
+	private void password(String passwordString) throws NoSuchFieldException {
 		element(password).sendKeys(passwordString);
+	
+		
 	}
 	
 	private void loginButton() {
@@ -47,11 +52,12 @@ public class LoginPage extends BaseClass {
 		element(ok).click();
 	}
 	
-	public void loginPage(String e, String p) {
+	public HomePage loginPage(String e, String p) throws NoSuchFieldException {
 		loginButton();
 		enterEmail(e);
 		password(p);
 		submitUser();
+		return new HomePage(driver);
 	}
 	
 	

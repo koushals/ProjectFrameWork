@@ -5,9 +5,14 @@ import java.net.URL;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import com.automation.page.action.HomePage;
+import com.automation.page.action.LoginPage;
+import com.automation.page.action.MusicPlayerPage;
+import com.automation.page.action.MySuggestionsPage;
 import com.automation.utils.PropertyUtil;
 
 import io.appium.java_client.AppiumDriver;
@@ -29,9 +34,10 @@ public class IHeartRadio {
 	private final  String APPACTIVITY =  "appActivity";
 	private final  String APKFILENAME =  "apkFileName";
 	private final  String URL =  "url";
+	
 
 	
-	@BeforeTest
+	@BeforeMethod
 	public void	createTheInstance() throws Exception{
 		capablities.setCapability(DEVICENAME,p.getPropertiesFromFile().getProperty(DEVICENAME));
 		capablities.setCapability(PLATFORMNAME, p.getPropertiesFromFile().getProperty(PLATFORMNAME));
@@ -41,12 +47,30 @@ public class IHeartRadio {
 		}else {
 			capablities.setCapability(APPACTIVITY, p.getPropertiesFromFile().getProperty(APPACTIVITY));
 			driver = new AndroidDriver<WebElement>(new URL(p.getPropertiesFromFile().getProperty(URL)), capablities);
-		}	
+		}			
+	}
+	
+	
+	@Test
+	public void playSong() throws Exception{
+		String email = p.getPropertiesFromParameter("email");
+		String password = p.getPropertiesFromParameter("password");
+		LoginPage lp = new LoginPage(driver);
+		lp.tapSkip();
+		HomePage h = lp.loginPage(email, password);
+		MySuggestionsPage m =h.tapOnMySuggestion();
+		MusicPlayerPage mp = m.selectFromStations(0);
 		
 	}
 	
 	
-	@AfterTest
+	
+	
+	
+	
+	
+	
+	@AfterMethod
 	public void tearDown() throws Exception {
 		if (driver != null) {
 			System.out.println("tearDown is called ...");

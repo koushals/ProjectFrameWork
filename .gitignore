@@ -6,6 +6,11 @@
 *.exe
 *.o
 *.so
+*.txt
+*.jpg
+*.png
+*.html
+
 
 # Packages #
 ############
@@ -15,8 +20,6 @@
 *.dmg
 *.gz
 *.iso
-*.jar
-*.rar
 *.tar
 *.zip
 

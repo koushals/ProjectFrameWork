@@ -23,7 +23,7 @@ public class IHeartRadio {
 	
 	AppiumDriver<WebElement> driver;
 	private final  String fileName= "iHeartRadio.properties";
-	DesiredCapabilities capablities;
+	DesiredCapabilities capablities = new DesiredCapabilities();
 	File file;
 	PropertyUtil p = new PropertyUtil(fileName);
 	private final  String DEVICENAME =  "deviceName";	
@@ -39,6 +39,7 @@ public class IHeartRadio {
 	
 	@BeforeMethod
 	public void	createTheInstance() throws Exception{
+		
 		capablities.setCapability(DEVICENAME,p.getPropertiesFromFile().getProperty(DEVICENAME));
 		capablities.setCapability(PLATFORMNAME, p.getPropertiesFromFile().getProperty(PLATFORMNAME));
 		capablities.setCapability(APPPACKAGE, p.getPropertiesFromFile().getProperty(APPPACKAGE));
@@ -62,12 +63,6 @@ public class IHeartRadio {
 		MusicPlayerPage mp = m.selectFromStations(0);
 		
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	@AfterMethod

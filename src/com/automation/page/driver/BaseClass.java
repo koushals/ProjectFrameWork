@@ -13,8 +13,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class BaseClass {
 	
-	private AndroidDriver<WebElement> androidDriver;
-	private AppiumDriver<WebElement> driver;
+	protected AppiumDriver<WebElement> driver;
 	private List<WebElement> list;
 	
 	private String className = getClass().getName(); 

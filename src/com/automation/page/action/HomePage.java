@@ -11,7 +11,6 @@ import io.appium.java_client.AppiumDriver;
 
 public class HomePage extends BaseClass{
 	
-	AppiumDriver<WebElement> driver;
 	
 	public HomePage(AppiumDriver<WebElement> driver) {
 		super(driver);
@@ -29,7 +28,7 @@ public class HomePage extends BaseClass{
 		}
 	}
 	
-	public  MySuggestionsPage tapOnMySuggestion() {
+	public MySuggestionsPage tapOnMySuggestion() {
 		element(mySuggestionTab).click();	
 		return new MySuggestionsPage(driver);
 	}

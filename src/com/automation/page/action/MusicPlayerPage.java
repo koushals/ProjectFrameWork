@@ -17,7 +17,6 @@ public class MusicPlayerPage extends BaseClass{
 	 By love = By.id(MusicPlayerEnum.LOVE_ID.toString());
 	 By next = By.id(MusicPlayerEnum.NEXT_ID.toString());
 	 
-	static AppiumDriver<WebElement> d;
 	 
 	public MusicPlayerPage(AppiumDriver<WebElement> driver) {
 		super(driver);

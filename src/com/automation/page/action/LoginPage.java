@@ -13,7 +13,6 @@ import io.appium.java_client.AppiumDriver;
 
 public class LoginPage extends BaseClass {
 	
-	AppiumDriver<WebElement> driver;
 	ReportUtils report;
 	public LoginPage(AppiumDriver<WebElement> driver) {
 		super(driver);
@@ -44,8 +43,6 @@ public class LoginPage extends BaseClass {
 	private void submitUser() {
 		element(submitButton).click();
 	}
-	
-	
 	
 	public void tapSkip() {
 		element(skip).click();

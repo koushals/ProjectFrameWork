@@ -14,6 +14,7 @@ public class HomePage extends BaseClass{
 	
 	public HomePage(AppiumDriver<WebElement> driver) {
 		super(driver);
+		className = this.getClass().getName();
 	}
 
 	 By nofitication = By.id(HomePageEnum.SUGGESTION_ID.toString());
@@ -29,7 +30,8 @@ public class HomePage extends BaseClass{
 	}
 	
 	public MySuggestionsPage tapOnMySuggestion() {
-		element(mySuggestionTab).click();	
+		element(mySuggestionTab).click();
+		System.out.println(className);
 		return new MySuggestionsPage(driver);
 	}
 	

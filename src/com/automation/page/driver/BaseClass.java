@@ -16,7 +16,7 @@ public class BaseClass {
 	protected AppiumDriver<WebElement> driver;
 	private List<WebElement> list;
 	
-	private String className = getClass().getName(); 
+	protected String className = ""; 
 	
 	public BaseClass(AppiumDriver<WebElement> driver) {
 		this.driver = driver;

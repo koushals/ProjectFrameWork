@@ -27,7 +27,9 @@ public class MusicPlayerPage extends BaseClass{
 		return getText(time);
 	}
 	
-	
+	public void likeAlbum() {
+		element(like).click();
+	}
 	public  boolean likeisDisplayed() {
 		return elementisDisplayed(like);
 	}

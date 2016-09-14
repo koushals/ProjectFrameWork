@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="114038" started-at="2016-09-14T03:37:05Z" finished-at="2016-09-14T03:38:59Z">
+  <suite name="Default suite" duration-ms="174868" started-at="2016-09-14T03:59:17Z" finished-at="2016-09-14T04:02:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="114038" started-at="2016-09-14T03:37:05Z" finished-at="2016-09-14T03:38:59Z">
+    <test name="Default test" duration-ms="174868" started-at="2016-09-14T03:59:17Z" finished-at="2016-09-14T04:02:11Z">
       <class name="com.automation.page.test.IHeartRadio">
-        <test-method status="PASS" signature="createTheInstance()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="createTheInstance" is-config="true" duration-ms="9594" started-at="2016-09-13T20:37:05Z" finished-at="2016-09-13T20:37:15Z">
+        <test-method status="PASS" signature="createTheInstance()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="createTheInstance" is-config="true" duration-ms="8578" started-at="2016-09-13T20:59:17Z" finished-at="2016-09-13T20:59:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTheInstance -->
-        <test-method status="PASS" signature="playSong()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="playSong" duration-ms="96574" started-at="2016-09-13T20:37:15Z" finished-at="2016-09-13T20:38:51Z">
+        <test-method status="PASS" signature="likeAlbum()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="likeAlbum" duration-ms="71930" started-at="2016-09-13T20:59:25Z" finished-at="2016-09-13T21:00:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- likeAlbum -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="tearDown" is-config="true" duration-ms="4703" started-at="2016-09-13T21:00:37Z" finished-at="2016-09-13T21:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="createTheInstance()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="createTheInstance" is-config="true" duration-ms="8187" started-at="2016-09-13T21:00:42Z" finished-at="2016-09-13T21:00:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTheInstance -->
+        <test-method status="PASS" signature="playSong()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="playSong" duration-ms="76396" started-at="2016-09-13T21:00:50Z" finished-at="2016-09-13T21:02:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- playSong -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="tearDown" is-config="true" duration-ms="7846" started-at="2016-09-13T20:38:51Z" finished-at="2016-09-13T20:38:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.page.test.IHeartRadio@5622fdf]" name="tearDown" is-config="true" duration-ms="5046" started-at="2016-09-13T21:02:06Z" finished-at="2016-09-13T21:02:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

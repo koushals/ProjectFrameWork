@@ -66,8 +66,20 @@ public class IHeartRadio {
 		HomePage h = lp.loginPage(email, password);
 		MySuggestionsPage m =h.tapOnMySuggestion(); 
 		MusicPlayerPage mp = m.selectFromStations(0);
-		
 	}
+	
+	@Test
+	public void likeAlbum() throws Exception{
+		String email = pt.getProperty("email");
+		String password = pt.getProperty("password");
+		LoginPage lp = new LoginPage(driver);
+		lp.tapSkip();
+		HomePage h = lp.loginPage(email, password);
+		MySuggestionsPage m =h.tapOnMySuggestion(); 
+		MusicPlayerPage mp = m.selectFromStations(0);
+		mp.likeAlbum();
+	}
+	
 	
 	@AfterMethod
 	public void tearDown() throws Exception{

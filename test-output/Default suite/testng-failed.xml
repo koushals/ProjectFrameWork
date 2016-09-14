@@ -7,7 +7,7 @@
         <methods>
           <include name="createTheInstance"/>
           <include name="tearDown"/>
-          <include name="playSong"/>
+          <include name="likeAlbum"/>
         </methods>
       </class> <!-- com.automation.page.test.IHeartRadio -->
     </classes>

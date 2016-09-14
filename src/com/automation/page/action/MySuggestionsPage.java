@@ -12,9 +12,6 @@ import io.appium.java_client.AppiumDriver;
 
 
 public class MySuggestionsPage extends BaseClass{
-	
-	AppiumDriver<WebElement> driver;
-
 
 	public MySuggestionsPage(AppiumDriver<WebElement> driver) {
 		super(driver);

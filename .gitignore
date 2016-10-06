@@ -42,3 +42,4 @@ Thumbs.db
 # ignore this folders #
 test-output/
 
+/target/

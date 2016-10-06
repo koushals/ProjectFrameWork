@@ -35,8 +35,6 @@ public class IHeartRadio {
 	private final static String PLATFORMNAME =  "platformName";
 	private final static String APKFILENAME =  "apkFileName";
 	private final static String URL =  "url";
-
-
 	
 	@BeforeMethod
 	public void	createTheInstance() throws Exception{
